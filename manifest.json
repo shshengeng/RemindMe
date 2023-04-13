@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "ReminderMe",
+  "description": "You've used e-devices for a while, it reminds you",
+  "version": "1.0",
+  "icons": {
+    "16": "imgs/icons/clock-16.png",
+    "32": "imgs/icons/clock-32.png",
+    "48": "imgs/icons/clock-64.png",
+    "128": "imgs/icons/clock-128.png"
+  },
+  "action": {
+    "default_popup": "html/popup.html",
+    "default_icon": {                
+        "16": "imgs/icons/clock-16.png",
+        "32": "imgs/icons/clock-32.png",
+        "48": "imgs/icons/clock-64.png",
+        "128": "imgs/icons/clock-128.png"      
+    },
+    "default_title": "RemindMe"
+  },
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "permissions": [
+    "notifications",
+    "storage"
+  ]
+}

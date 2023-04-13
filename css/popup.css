@@ -1,0 +1,63 @@
+#frame {
+  width: 200px;
+  height: 125px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+}
+
+#frame h1 {
+  margin: 0;
+  padding: 6px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#frame hr {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+#frame input {
+  display: block;
+  margin: 10px auto;
+  width: 70%;
+  height: 30px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#submit,
+#cancel {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+#submit {
+  margin-left: 25px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+}
+
+#cancel {
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+}
+
+#submit:hover,
+#cancel:hover {
+  opacity: 0.8;
+}
