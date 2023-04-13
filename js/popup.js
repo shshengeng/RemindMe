@@ -3,9 +3,11 @@ const regExp = /^[1-9]\d*$/;
 
 document.addEventListener('DOMContentLoaded', function() {
 
+
     let frame = document.getElementById("frame");
     let ipt = document.getElementById("input");
     let submit = document.getElementById("submit");
+    let reset = document.getElementById("reset");
     let cancel = document.getElementById("cancel");
 
     submit.addEventListener("click", function(){
@@ -26,26 +28,20 @@ document.addEventListener('DOMContentLoaded', function() {
         
     })
 
+    reset.addEventListener("click", function(){
+        ipt.value = "";
+        chrome.storage.local.set({"numberMins": ""});
+        chrome.runtime.sendMessage({reset: "true"});
+    })
+
     cancel.addEventListener("click", function(){
         window.close();
     })
 
-    // chrome.storage.local.get("numberMins", function(result) {
-    //     ipt.value = result.numberMins;
-    // });
+    chrome.storage.local.get("numberMins", function(result) {
+        ipt.value = result.numberMins;
+    });
 
-    // chrome.storage.onChanged.addListener(function(changes, namespace) {
-    //     for (var key in changes) {
-    //       if (key === 'numberMins') {
-    //         ipt.value = changes[key];
-    //       }
-    //     }
-    // });
-      
-    //   chrome.storage.local.get(['yourKey'], function(result) {
-    //     console.log('Value currently is ' + result.yourKey);
-    //   });
-      
   
 });
 

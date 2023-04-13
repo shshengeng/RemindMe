@@ -1,5 +1,5 @@
 #frame {
-  width: 200px;
+  width: 250px;
   height: 125px;
   background-color: #fff;
   border-radius: 8px;
@@ -15,6 +15,10 @@
   text-align: center;
 }
 
+#timestamp{
+  display: block;
+}
+
 #frame hr {
   margin: 0;
   padding: 0;
@@ -24,7 +28,7 @@
 #frame input {
   display: block;
   margin: 10px auto;
-  width: 70%;
+  width: 80%;
   height: 30px;
   font-size: 18px;
   border: 1px solid #ccc;
@@ -32,9 +36,10 @@
 }
 
 #submit,
+#reset,
 #cancel {
   display: inline-block;
-  margin: 0 10px;
+  margin: 0 7px;
   font-size: 16px;
   font-weight: bold;
   text-align: center;
@@ -45,7 +50,14 @@
 }
 
 #submit {
-  margin-left: 25px;
+  margin-left: 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+}
+
+#reset{
+  margin-left: 5px;
   background-color: #4caf50;
   color: #fff;
   border: none;
